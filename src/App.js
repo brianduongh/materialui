@@ -2,10 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
-import logo from './logo.svg';
-import './App.css';
 
 const styles = {
+  app: {
+    padding: 0,
+    margin: 0,
+  },
   root: {
     background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
     border: 0,
@@ -21,22 +23,8 @@ function App(props) {
   const { classes } = props;
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <Button className={classes.root}>Higher-order component</Button>
-      </header>
+    <div className={classes.app}>
+      <Button className={classes.root}>Higher-order component</Button>
     </div>
   );
 }
